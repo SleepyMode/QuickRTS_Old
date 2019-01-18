@@ -73,58 +73,69 @@ public:
 	Vector3& operator=(const Vector3& vec);
 
 	// #groupdoc
-	// Adds another vector to the vector.
+	// Creates a vector with the added value of both operands.
 	Vector3& operator+=(const Vector3& vec);
-	Vector3& operator+=(const float& val);
+	Vector3& operator+=(const float val);
+	// #endgroup
+
+	// #groupdoc
+	// Creates a vector with the subtracted value of both operands.
+	Vector3& operator-=(const Vector3& vec);
+	Vector3& operator-=(const float val);
+	// #endgroup
+
+	// #groupdoc
+	// Creates a vector with the scaled value of both operands.
+	Vector3& operator*=(const Vector3& vec);
+	Vector3& operator*=(const float val);
+	// #endgroup
+
+	// #groupdoc
+	// Creates a vector with the divided value of both operands.
+	Vector3& operator/=(const Vector3& vec);
+	Vector3& operator/=(const float val);
 	// #endgroup
 
 	// #groupdoc
 	// Creates a vector with the added value of both operands.
 	friend Vector3 operator+(const Vector3& lhs, const Vector3& rhs);
-	friend Vector3 operator+(const Vector3& lhs, const float& rhs);
-	friend Vector3 operator+(const float& lhs, const Vector3& rhs);
+	friend Vector3 operator+(const Vector3& lhs, const float rhs);
+	friend Vector3 operator+(const float lhs, const Vector3& rhs);
+	// #endgroup
+
+	// #groupdoc
+	// Creates a vector with the subtracted value of both operands.
+	friend Vector3 operator-(const Vector3& lhs, const Vector3& rhs);
+	friend Vector3 operator-(const Vector3& lhs, const float rhs);
+	friend Vector3 operator-(const float lhs, const Vector3& rhs);
+	// #endgroup
+
+	// #groupdoc
+	// Creates a vector with the scaled value of both operands.
+	friend Vector3 operator*(const Vector3& lhs, const Vector3& rhs);
+	friend Vector3 operator*(const Vector3& lhs, const float rhs);
+	friend Vector3 operator*(const float lhs, const Vector3& rhs);
+	// #endgroup
+
+	// #groupdoc
+	// Creates a vector with the divided value of both operands.
+	friend Vector3 operator/(const Vector3& lhs, const Vector3& rhs);
+	friend Vector3 operator/(const Vector3& lhs, const float rhs);
+	friend Vector3 operator/(const float lhs, const Vector3& rhs);
 	// #endgroup
 
 	// #groupdoc
 	// Checks for the equality of the vector.
 	friend bool operator==(const Vector3& lhs, const Vector3& rhs);
-	friend bool operator==(const Vector3& lhs, const float& rhs);
-	friend bool operator==(const float& lhs, const Vector3& rhs);
+	friend bool operator==(const Vector3& lhs, const float rhs);
+	friend bool operator==(const float lhs, const Vector3& rhs);
 	// #endgroup
 
 	// #groupdoc
 	// Checks for the inequality of the vector.
 	friend bool operator!=(const Vector3& lhs, const Vector3& rhs);
-	friend bool operator!=(const Vector3& lhs, const float& rhs);
-	friend bool operator!=(const float& lhs, const Vector3& rhs);
-	// #endgroup
-
-	// #groupdoc
-	// Vector inequality - Greater than.
-	friend bool operator>(const Vector3& lhs, const Vector3& rhs);
-	friend bool operator>(const Vector3& lhs, const float& rhs);
-	friend bool operator>(const float& lhs, const Vector3& rhs);
-	// #endgroup
-
-	// #groupdoc
-	// Vector inequality - Less than.
-	friend bool operator<(const Vector3& lhs, const Vector3& rhs);
-	friend bool operator<(const Vector3& lhs, const float& rhs);
-	friend bool operator<(const float& lhs, const Vector3& rhs);
-	// #endgroup
-
-	// #groupdoc
-	// Vector inequality - Greater than or equal.
-	friend bool operator>=(const Vector3& lhs, const Vector3& rhs);
-	friend bool operator>=(const Vector3& lhs, const float& rhs);
-	friend bool operator>=(const float& lhs, const Vector3& rhs);
-	// #endgroup
-
-	// #groupdoc
-	// Vector inequality - Less than or equal.
-	friend bool operator<=(const Vector3& lhs, const Vector3& rhs);
-	friend bool operator<=(const Vector3& lhs, const float& rhs);
-	friend bool operator<=(const float& lhs, const Vector3& rhs);
+	friend bool operator!=(const Vector3& lhs, const float rhs);
+	friend bool operator!=(const float lhs, const Vector3& rhs);
 	// #endgroup
 };
 
