@@ -123,6 +123,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\application\main.cpp" />
+    <ClCompile Include="src\math\vector2.cpp" />
+    <ClCompile Include="src\math\vector3.cpp" />
+    <ClCompile Include="src\math\vector4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\core\decl.h" />
